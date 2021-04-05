@@ -1,0 +1,59 @@
+<div class="radio" style="width:100px; margin: auto; margin-top: 0%; margin-left: -3%;">
+  <div class="s002" style="width: 150%;">
+    <form>
+      <div class="inner-form" style="width: 150%;">
+        <div class="input-field fifth-wrap">
+          <p style="color:lavenderblush; margin-left: 12%; margin-bottom: 20%;"> Filter </p>
+          <div class="inp3"><input type="text" class="inp" name="cnm" placeholder="Service Name"
+              [(ngModel)]="searchRentName" style="width: 150px;"></div>
+          <div class="inp3"><input type="text" class="inp" name="cnm" placeholder="Service Location"
+              [(ngModel)]="searchRentLocation" style="width: 150px;"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="main">
+  <div class="main-agileinfo">
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      <!-- owl-carousel -->
+
+      <div
+        *ngFor="let rentService of filtredRentServices | rentFilter: searchRentName | rentFilter2: searchRentLocation"
+        class="list">
+        <div class="item">
+          <div class="pricing pricing-two">
+            <div class="pricing-top top-two">
+              <h3>{{rentService.serviceName}}</h3>
+              <p>{{rentService.location}}</p>
+              <div class="rate">
+                <ngb-rating [rate]="rentService.rate"></ngb-rating>
+              </div>
+            </div>
+            <div class="pricing-bottom">
+              <div class="img1">
+                <img style="width: 100%;" src={{rentService.img}} />
+              </div>
+              <div class="agileits-buy">
+                <a class="popup-with-zoom-anim" (click)="onSelect(rentService)" style="width: 100px;">More</a>
+                <div class="row">
+                  <a class="popup-with-zoom-anim" [hidden]="check()"
+                    style="margin-left: -2%; margin-top: 5%; width: 95px;"
+                    (click)="onSelectRentService(rentService)">Change</a>
+                  <a class="popup-with-zoom-anim" [hidden]="check()"
+                    style="margin-top: 5%; width: 95px; margin-left: 10px;"
+                    (click)="onDelete(rentService.serviceId)">Delete</a>
+                  <a class="popup-with-zoom-anim" [hidden]="check()"
+                    style="margin-top: 5%; width: 95px; margin-left: 10px;" (click)="onInfo(rentService)">Info</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

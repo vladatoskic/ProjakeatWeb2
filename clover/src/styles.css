@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+#toast-container > div {
+    opacity:1;
+}
+.toast {
+    font-size: initial !important;
+    border: initial !important;
+    backdrop-filter: blur(0) !important;
+    width: 100px;
+    height: 50px;
+  }
+  .toast-success {
+    background-color: #53b453 !important;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    margin-top: -650px;
+    margin-left: 1200px;
+  }
+  .toast-error {
+    background-color: #BD362F !important;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    margin-top: -650px;
+    margin-left: 1200px;
+  }
+  .toast-info {
+    background-color: #2F96B4 !important;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    margin-top: -650px;
+    margin-left: 1200px;
+  }
+  .toast-warning {
+    background-color: #F89406 !important;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    margin-top: -650px;
+    margin-left: 1200px;
+  }
+
+  input.ng-dirty.ng-invalid{
+    border-color: rgb(235, 35, 0);
+  }
+
+  div.validation-error{
+    width: 100%;
+    margin-top: .25rem;
+    margin-left: 32%;
+    font-size: 80%;
+    color: rgb(235, 35, 0);
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

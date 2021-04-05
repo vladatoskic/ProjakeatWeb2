@@ -1,0 +1,17 @@
+
+    <!-- <div *ngFor="let car of this.dataCars.selectedService.serviceCars" class="div1"> -->
+      <div *ngFor="let car of this?.filtredCars" class="div1">
+        <div class="image" style="content:url({{car.imgUrl}})"></div>
+        <!-- <div class="divName">{{car.serviceName}}</div> -->
+        <div class="div5To">Brand: {{car.brand}} &nbsp;&nbsp;  Year:{{car.year}}</div>
+        <div class="div6To">Model: {{car.model}} &nbsp;&nbsp; Seats:{{car.numOfSeats}}</div>
+        <div class="div3From">Location:{{car.location}} &nbsp;&nbsp; Type:{{car.typeOfCar}}</div>
+        <div class="rate"> <ngb-rating [rate]="car.averageRate"></ngb-rating> </div> 
+        
+        
+        <div class="btn">
+        <button class="myButton" *ngIf="dalijeadmin()" (click)="onRent(car)">Rent {{car.pricePerDay}}$</button>
+        <button class="myButton" [hidden]="check()" (click)="onSelectCar(car)">Change</button>
+        <button class="myButton" [hidden]="check()" (click)="onDelete(car.carId)">Delete</button>
+      </div>
+      </div>

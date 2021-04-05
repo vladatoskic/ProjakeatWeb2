@@ -1,0 +1,79 @@
+<form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)" id="signup-form" class="signup-form">
+
+  <input type="hidden" name="carId" [value]="service.formData.carId">
+
+  <input type="hidden" name="RentServiceServiceId" [value]="rentService.serviceId">
+
+    <!-- <div class="form-group">
+      Rent Service Id: 
+      <input #RentServiceServiceId="ngModel" [(ngModel)]="service.formData.RentServiceServiceId" name="RentServiceServiceId" type="number" class="form-input" id="RentServiceServiceId" required/>
+    </div> -->
+
+    <!-- <div class="form-group">
+      Rent Service Name: 
+      <input #serviceName="ngModel" [(ngModel)]="service.formData.serviceName" name="serviceName" type="text" class="form-input" id="serviceName" required/>
+      <div class="validation-error" *ngIf="serviceName.invalid && serviceName.touched">This field is required</div>
+    </div> -->
+
+    <div class="form-group">
+      Car Brand:
+      <input #brand="ngModel" [(ngModel)]="service.formData.brand" name="brand" type="text" class="form-input" id="brand" required/>
+      <div class="validation-error" *ngIf="brand.invalid && brand.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      <!-- <button class="btn-search" type="button">Add Image</button> -->
+      Car Model:
+      <input #model="ngModel" [(ngModel)]="service.formData.model" name="model" type="text" class="form-input" id="model" required/>
+      <div class="validation-error" *ngIf="model.invalid && model.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Car Year:
+      <input #year="ngModel" [(ngModel)]="service.formData.year" name="year"  type="number" class="form-input" id="year" required/>
+      <div class="validation-error" *ngIf="year.invalid && year.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Price per Day:
+      <input #pricePerDay="ngModel" [(ngModel)]="service.formData.pricePerDay" name="pricePerDay" type="number" class="form-input" id="pricePerDay" required/>
+      <div class="validation-error" *ngIf="pricePerDay.invalid && pricePerDay.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Number of Seats:
+      <input #numOfSeats="ngModel" [(ngModel)]="service.formData.numOfSeats" name="numOfSeats" type="number" class="form-input" id="numOfSeats" required/>
+      <div class="validation-error" *ngIf="numOfSeats.invalid && numOfSeats.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Image:
+      <input #imgUrl="ngModel" [(ngModel)]="service.formData.imgUrl" name="imgUrl" type="text" class="form-input" id="imgUrl" required/>
+      <div class="validation-error" *ngIf="imgUrl.invalid && imgUrl.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Car Locatio:
+      <input #location="ngModel" [(ngModel)]="service.formData.location" name="location" type="text" class="form-input" id="location" required/>
+      <div class="validation-error" *ngIf="location.invalid && location.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Car End Locatio: 
+      <input #endLocation="ngModel" [(ngModel)]="service.formData.endLocation" name="endLocation" type="text" class="form-input" id="endLocation" required/>
+      <div class="validation-error" *ngIf="endLocation.invalid && endLocation.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      Type of Car:
+      <input #typeOfCar="ngModel" [(ngModel)]="service.formData.typeOfCar" name="typeOfCar" type="text" class="form-input" id="typeOfCar" required/>
+      <div class="validation-error" *ngIf="typeOfCar.invalid && typeOfCar.touched">This field is required</div>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" [disabled]="form.invalid" name="submit" id="submit" class="form-submit" value="Add Car"/>
+  </div>
+
+  <button onclick="Close()"> Close</button>
+  
+</form>

@@ -1,0 +1,491 @@
+body, html {
+    background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+  }
+  .bg {
+    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg');
+    height: 100%;
+    width: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -50px;
+  }
+
+  .profile {
+    margin: 20px 0;
+  }
+  
+  /* Profile sidebar */
+  .profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+  }
+  
+  .profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+  }
+  
+  .profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  
+  .profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .profile-userbuttons .btn {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+  }
+  
+  .profile-userbuttons .btn:last-child {
+    margin-right: 0px;
+  }
+      
+  .profile-usermenu {
+    margin-top: 30px;
+  }
+  
+  .profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+  }
+  
+  .profile-usermenu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+  }
+  
+  .profile-usermenu ul li.active {
+    border-bottom: none;
+  }
+  
+  .profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+  }
+  
+  /* Profile Content */
+  .profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+  }
+
+
+
+
+
+  .s002 {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+    padding: 15px;
+  }
+  
+  .s002 form {
+    width: 100%;
+    max-width: 1190px;
+  }
+  
+  .s002 form legend {
+    font-size: 60px;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 60px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .s002 form .inner-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  
+  .s002 form .inner-form .input-field {
+    position: relative;
+    border-right: 1px solid #ddd;
+  }
+  
+  .s002 form .inner-form .input-field .icon-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    -ms-flex-align: center;
+        align-items: center;
+    z-index: 1;
+  }
+  
+  .s002 form .inner-form .input-field .icon-wrap svg {
+    fill: #555;
+    width: 14px;
+    height: 14px;
+  }
+  
+  .s002 form .inner-form .input-field input {
+    height: 70px;
+    background: #fff;
+    border-radius: 0;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 20px 10px 45px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .s002 form .inner-form .input-field input.placeholder {
+    color: #9a9a9a;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .s002 form .inner-form .input-field input:-moz-placeholder {
+    color: #9a9a9a;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .s002 form .inner-form .input-field input::-webkit-input-placeholder {
+    color: #9a9a9a;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .s002 form .inner-form .input-field input:hover, .s002 form .inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+  
+  .s002 form .inner-form .input-field.first-wrap {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+  }
+  
+  .s002 form .inner-form .input-field.second-wrap {
+    min-width: 190px;
+    max-width: 190px;
+  }
+  
+  .s002 form .inner-form .input-field.third-wrap {
+    min-width: 190px;
+    max-width: 190px;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap {
+    min-width: 190px;
+    max-width: 190px;
+    border-right: 0;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__inner {
+    background: #fff;
+    border-radius: 0;
+    border: 0;
+    height: 70px;
+    color: #666;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 10px 32px 10px 45px;
+    border-radius: 0;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__inner .choices__list.choices__list--single {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100%;
+    font-size: 16px;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__inner .choices__item.choices__item--selectable.choices__placeholder {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100%;
+    opacity: 1;
+    color: #9a9a9a;
+    text-transform: uppercase;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__inner .choices__list--single .choices__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 100%;
+    color: #666;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices[data-type*="select-one"]:after {
+    right: 30px;
+    border-color: #e5e5e5 transparent transparent transparent;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__list.choices__list--dropdown {
+    border: 0;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 0;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__list.choices__list--dropdown .choices__item--selectable {
+    padding-right: 0;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background: #fff;
+    color: #b78a62;
+  }
+  
+  .s002 form .inner-form .input-field.fouth-wrap .choices__list--dropdown .choices__item {
+    color: #555;
+    min-height: 24px;
+    font-size: 16px;
+  }
+  
+  .s002 form .inner-form .input-field.fifth-wrap {
+    min-width: 190px;
+    max-width: 190px;
+    padding-left: 10px;
+    border-right: 0;
+  }
+  
+  .s002 form .inner-form .input-field.fifth-wrap .btn-search {
+    height: 70px;
+    width: 100%;
+    background: #0099e5;
+    white-space: nowrap;
+    border-radius: .5px;
+    font-size: 20px;
+    color: #fff;
+    transition: all .2s ease-out, color .2s ease-out;
+    border: 0;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .s002 form .inner-form .input-field.fifth-wrap .btn-search:hover {
+    background: #7fbad8;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .s002 form legend {
+      font-size: 50px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .s002 form .inner-form {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+    }
+    .s002 form .inner-form .input-field {
+      margin-bottom: 15px;
+    }
+    .s002 form .inner-form .input-field.first-wrap {
+      width: 100%;
+    }
+    .s002 form .inner-form .input-field.second-wrap {
+      width: calc(50% - 7.5px);
+      max-width: none;
+    }
+    .s002 form .inner-form .input-field.third-wrap {
+      width: calc(50% - 7.5px);
+      max-width: none;
+    }
+    .s002 form .inner-form .input-field.fouth-wrap {
+      width: calc(50% - 7.5px);
+      max-width: none;
+      margin-bottom: 0;
+    }
+    .s002 form .inner-form .input-field.fifth-wrap {
+      width: calc(50% - 7.5px);
+      max-width: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .s002 form legend {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+    .s002 form .inner-form .input-field.second-wrap, .s002 form .inner-form .input-field.third-wrap, .s002 form .inner-form .input-field.fouth-wrap, .s002 form .inner-form .input-field.fifth-wrap {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .s002 form .inner-form .input-field.fifth-wrap {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .admin{
+    position: absolute;
+    display: block;
+    margin-top: 61.5%;
+    margin-left: -90%;
+  }
+
+
+  .div1{
+    background-color: rgba(255, 255, 255, 0.808);
+    width: 1000px;
+    height: 145px;
+    top:10px;
+    border-radius: 10px;
+    position: relative;
+  
+    
+  }
+  .div2{
+    position: absolute;
+    left: 14px;
+    top: 14px;
+  }
+  .div3From{
+    font-family: "Lucida Console";
+    font-size: 150%;
+    position: absolute;
+    left: 14px;
+    top: 54px;
+  }
+  div.image {
+    position: absolute;
+    width: 530px;
+    height: 100px;
+    left: 250px;
+    top: 12px;
+    content:url(//avio.png);
+   
+  }
+  .image2 {
+    position: absolute;
+    width: 530px;
+    height: 100px;
+    left: 20px;
+    top: 12px;
+    content:url(../company-profile/1200px-Wizz_Air_logo_2015.svg.png);
+   
+  }
+  .div4{
+    position: absolute;
+    right: 14px;
+    top: 14px;
+  }
+  .div5To{
+    font-family: "Lucida Console";
+    font-size: 150%;
+    position: absolute;
+    right: 34px;
+    top: 54px;
+  }
+  .divName{
+    font-family: "Impact";
+    font-size: 150%;
+    position: absolute;
+    left: 480px;
+    top: 14px;
+    
+  }
+  .btn2{
+    position: absolute;
+    right: 34px;
+    bottom: 3px;
+  }
+  .myButton2 {
+  box-shadow: 0px 1px 0px 0px #f0f7fa;
+  background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+  background-color:#33bdef;
+  border-radius:11px;
+  border:1px solid #057fd0;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:9px 24px;
+  text-decoration:none;
+  text-shadow:0px -1px 0px #5b6178;
+  }

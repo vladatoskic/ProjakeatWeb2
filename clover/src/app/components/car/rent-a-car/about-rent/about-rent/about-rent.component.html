@@ -1,0 +1,33 @@
+<header id="header" class="fixed-left">
+  <div class="container d-flex align-items-center">
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a fragment="hero" (click)="onHome()">Home</a></li>
+        <li><a fragment="about" (click)="onAbout()">About</a></li>
+        <li><a fragment="cars" (click)="onCars()">Cars</a></li>
+        <li><a fragment="locations" (click)="onLocations()">Locations</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="about">
+
+    
+      <h2>O nama</h2>
+
+      
+
+      <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150"> -->
+        <p>{{rentService.about}}</p>
+      <!-- </div> -->
+
+      <!-- <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200"> -->
+        <!-- <div style="margin-top: -8%;" class="section-title" data-aos="fade-up"> -->
+          <h2>Cenovnik</h2>
+        <!-- </div> -->
+        <img src={{rentService.priceTable}} class="img-fluid animated" alt="">
+      <!-- </div> -->
+    <!-- </div> -->
+
+  </div>

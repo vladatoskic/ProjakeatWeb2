@@ -1,0 +1,567 @@
+body, html {
+    background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+  }  .bg {
+    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg');
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .section {
+	position: relative;
+	height: 100vh;
+}
+
+.avioImage{
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  left: 20px;
+  top: 12px;
+  content:url(../search-flight/avio.png);
+}
+
+.section .section-center {
+	position: absolute;
+	top: 30%;
+	left: 10px  ;
+  right: 36%;
+  width: 600px;
+  height: 300px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.pretrazi{
+  position:absolute;
+  width:720px;
+  height: 800px;
+  left: 20px;
+  top:87px;
+}
+
+.booking-form {
+	background: rgba(0, 0, 0, 0.4);
+	padding: 20px;
+  border-radius: 10px;
+  
+  
+}
+
+.booking-form .form-group {
+	position: relative;
+  margin-bottom: 20px;
+ 
+}
+
+.booking-form .form-control {
+	background-color: #fff;
+	height: 50px;
+	color: #191a1e;
+	border: none;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 40px;
+	padding: 3px 2px;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form .form-control::placeholder {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+	color: rgba(82, 82, 84, 0.4);
+}
+
+.booking-form select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 10px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: rgba(0, 0, 0, 0.3);
+	font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 24px;
+	height: 24px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.booking-form .form-checkbox input {
+	position: absolute !important;
+	margin-left: -9999px !important;
+	visibility: hidden !important;
+}
+
+.booking-form .form-checkbox label {
+	position: relative;
+	padding-top: 4px;
+	padding-left: 30px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.booking-form .form-checkbox label+label {
+	margin-left: 15px;
+}
+
+.booking-form .form-checkbox input+span {
+	position: absolute;
+	left: 2px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.booking-form .form-checkbox input+span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: #f23e3e;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+	opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked+span:after {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.booking-form .form-btn {
+	margin-top: 27px;
+}
+
+.conteiner{
+    margin-left: 39%;
+    margin-right: 0%;
+    margin-top: -46%;
+    height: 50%;
+    width: 60%;
+    padding: 20px;
+    background: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    border-radius: 10px;
+}
+.conteiner2{
+  position: absolute;
+right: 15px;
+top:85px;
+  height: 41%;
+  width: 60%;
+  padding: 20px;
+  background: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  border-radius: 10px;
+}
+.conteiner3{
+  position: absolute;
+right: 15px;
+top:500px;
+  height: 41%;
+  width: 60%;
+  padding: 20px;
+  background: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  border-radius: 10px;
+}
+.main{
+  background: chocolate;
+}
+
+
+.div1{
+  background-color: rgba(255, 255, 255, 0.808);
+  width: 1000px;
+  height: 145px;
+  top:10px;
+  border-radius: 10px;
+  position: relative;
+
+  
+}
+.div2{
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+
+.div56{
+  position: absolute;
+  right:0;
+  top:0;
+}
+.div3From{
+  font-family: "Lucida Console";
+  font-size: 150%;
+  position: absolute;
+  left: 14px;
+  top: 54px;
+}
+div.image {
+  position: absolute;
+  width: 530px;
+  height: 100px;
+  left: 220px;
+  content:url(../search-flight/avio.png);
+ 
+}
+.div4{
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+.div5To{
+  font-family: "Lucida Console";
+  font-size: 150%;
+  position: absolute;
+  right: 34px;
+  top: 54px;
+}
+.divName{
+  font-family: "Impact";
+  font-size: 150%;
+  position: absolute;
+  left: 480px;
+  top: 14px;
+  
+}
+.btn{
+  position: absolute;
+  right: 34px;
+  bottom: 3px;
+}
+.myButton {
+box-shadow: 0px 1px 0px 0px #f0f7fa;
+background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+background-color:#33bdef;
+border-radius:11px;
+border:1px solid #057fd0;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:15px;
+font-weight:bold;
+padding:9px 24px;
+text-decoration:none;
+text-shadow:0px -1px 0px #5b6178;
+}
+.myButton:hover {
+background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+background-color:#019ad2b6;
+}
+.myButton:active {
+position:relative;
+top:1px;
+}
+
+#style-22{
+  overflow: auto;
+   
+}
+#style-2::-webkit-scrollbar-track{
+border-radius: 12px;
+background-color: transparent;
+
+}
+#style-2::-webkit-scrollbar{
+  width: 12px;
+background-color: transparent;
+
+}
+#style-2::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: #673946;
+}
+
+
+.booking-form .submit-btn {
+	color: #fff;
+	background-color: #f23e3e;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+	opacity: 0.9;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+  
+  .cols{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .col{
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+  }
+  
+  .container{
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+      -webkit-perspective: 1000px;
+              perspective: 1000px;
+  }
+  
+  .front,
+  .back{
+    background-size: cover;
+      background-position: center;
+      -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      text-align: center;
+      min-height: 280px;
+      height: auto;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+  }
+  
+  .back{
+    background-image: -moz-linear-gradient(to left, #74ebd5, #9face6);
+    background-image: -ms-linear-gradient(to left, #74ebd5, #9face6);
+    background-image: -o-linear-gradient(to left, #74ebd5, #9face6);
+    background-image: -webkit-linear-gradient(to left, #74ebd5, #9face6);
+    background-image: linear-gradient(to left, #74ebd5, #9face6);
+  }
+  
+  .front:after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      content: '';
+      display: block;
+      opacity: .6;
+      background-color: #000;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      border-radius: 10px;
+  }
+  .container:hover .front,
+  .container:hover .back{
+      -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  
+  .back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+  
+  .inner{
+      -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+              transform: translateY(-50%) translateZ(60px) scale(0.94);
+      top: 50%;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      outline: 1px solid transparent;
+      -webkit-perspective: inherit;
+              perspective: inherit;
+      z-index: 2;
+  }
+  
+  .container .back{
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  }
+  
+  .container .front{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  }
+  
+  .container:hover .back{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .container:hover .front{
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .front .inner p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .front .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+  }
+  
+  .front .inner span{
+    color: rgba(255,255,255,0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+  }
+  
+  @media screen and (max-width: 64rem){
+    .col{
+      width: calc(33.333333% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 48rem){
+    .col{
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 32rem){
+    .col{
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  .inp{
+   
+    border-radius: 10px;
+    background: #ffffffce;
+  }
+  .inp1{
+    position: absolute;;
+    top: 0;
+  }
+  .inp2{
+    position: absolute;;
+    top: 0;
+    left:220px;
+  }
+  .inp3{
+    position: absolute;;
+    top: 0;
+    left:420px;
+  }
+  .slctComp{
+    position: absolute;;
+    top: 0;
+    height: 20%;
+    left:420px;
+  }
+  .button1 {
+    background-color: rgba(255, 255, 255, 0.774);
+    color: black;
+    border: 3px solid rgba(87, 142, 224, 0.938); /* Green */
+    border-radius: 10px;
+  }
+  .btn11{
+    position: absolute;;
+    top: 0;
+    height: 100px;
+    
+    right: 100px;
+  }

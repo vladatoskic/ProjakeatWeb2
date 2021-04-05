@@ -1,0 +1,30 @@
+<div class="conteiner3" id="style-22" style="margin-top: -10%;width: 840px;">
+    <div class="inp1"><input type="text" class="inp" name="min" placeholder="highest price.." [(ngModel)]="searchPrice" ></div>
+    <div class="inp2"><input type="text" class="inp" name="max" placeholder="duration" [(ngModel)]="searchDuration"></div>
+    <div class="inp3"><input type="text" class="inp" name="cnm" placeholder=" company name.." [(ngModel)]="searchCompanyName"></div>
+   
+    <!--<div class="slctComp"> <select class="inp" name="country">
+            <option value="australia">Wizzair</option>
+            <option value="canada">Rayanair</option>
+            <option value="usa">USA</option>
+          </select></div>-->
+        
+    <div style="width: 800px;" *ngFor="let flight of searchedFlights | flightFilter: searchCompanyName | flightFilter2: searchDuration | flightFilter3:searchPrice" class="div1">
+            <div class="div2">{{flight.departing.toLocaleString()}}</div>
+            <div class="div">{{flight.startTime}}</div>
+
+            <div class="div3From">{{flight.from}}</div>
+            <div class="image"></div>
+            <div class="div4">{{flight.returning.toLocaleString()}}</div>
+            
+            <div class="div5To">{{flight.to}}</div>
+            <div class="div56">{{flight.endTime}}</div>
+            <div class="divName">{{flight.companyName}}</div>
+            <div class="btn">
+            <button (click)="onSelect(flight)" class="myButton">BOOK {{flight.price}}$</button>
+            <button *ngIf="dalijeadmin()" (click)="onSelect2(flight)" class="myButton">Change</button>
+
+        </div>
+        </div>
+
+</div>

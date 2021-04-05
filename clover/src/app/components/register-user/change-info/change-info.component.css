@@ -1,0 +1,27 @@
+.bg {
+    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg');
+    height: 100%;
+    width: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .conteiner8{
+    position: absolute;
+    left: 35%;
+    top:7%;
+    height: 60%;
+    width: 25%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.733);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    border-radius: 10px;
+  }
+  
+  .poz{
+    position: absolute;
+    left: 35%;
+  }

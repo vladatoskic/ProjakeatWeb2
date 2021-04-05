@@ -1,0 +1,221 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<body>
+    <div class="bg">
+            <form class="form-inline">
+                    <div class="md-form my-0" style="margin-left: 750px;">
+                        
+                        <!-- <button type="button" (click)="seeAllUsers()" class="btn btn-success btn-sm">Find</button> -->
+                    </div>
+                </form>
+        <!-- <div class="container" style="margin-top: 30px;"> -->
+
+                <div class="col-md-3">
+                    <div class="profile-sidebar">
+                        <div class="profile-userpic">
+                            <img src="https://pngimage.net/wp-content/uploads/2018/06/photo-profil-png-1.png"
+                                class="img-responsive" alt="">
+                        </div>
+                        <div class="profile-usertitle">
+                            <div class="profile-usertitle-name">
+                                <div *ngIf="user !== null"> {{user.name}} </div>
+                            </div>
+
+                            <div class="profile-usertitle-job">
+                                {{this.trenutni.name}}
+                            </div>
+                        </div>
+                        <div class="profile-usermenu">
+                            <ul class="nav">
+                                <li (click)="ispisRezervacija()">
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-list"></i>
+                                        Reservation Flights</a>
+                                </li>
+                                <li (click)="ispisRezervacijaCars()">
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-list"></i>
+                                        Reservation Cars </a>
+                                </li>
+                                <li (click)="seeAllUsers()">
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        All users </a>
+                                </li>
+                                <li (click)="ispisPrijatelja()">
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Friend List </a>
+                                </li>
+                                <li (click)="ispisZahteva()">
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        Friend request </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-time"></i>
+                                        History </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/register-user">
+                                        <i class="glyphicon glyphicon-list-alt"></i>
+                                        Your invites </a>
+                                </li>
+                                <li (click)="changeInfo()">
+                                    <a >
+                                        <i class="glyphicon glyphicon-wrench"></i>
+                                        Account Settings </a>
+                                </li>
+                                <li [hidden]="checkAdmin()">
+                                    <a routerLink="/register-user/change-password">
+                                        <i class="glyphicon glyphicon-wrench"></i>
+                                        Admin Settings </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-9">
+                    <div>
+                            <input  type="text" placeholder="Find Frends"  [(ngModel)]="searchFriend" >
+                        <div *ngFor="let rUser of allRegistredUsers | users:searchFriend"  class="div1">
+                            <div class="div2"></div>
+                            <div class="div3From">{{rUser.email}}</div>
+                            <div class="image"></div>
+                            <div class="div4"></div>
+                            <div class="div5To">{{rUser.name}}</div>
+                            <div class="divName"></div>
+                            <div class="btn2">
+                                <button (click)="addFriend(rUser)" class="myButton2">Add </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-md-9">
+                    <div>
+                        <div *ngFor="let rUser of allReservation" class="div1">
+                            <div class="div2"></div>
+                            <div class="div3From">FROM:{{rUser.reservedFlight.from}}</div>
+                            <div>BROJ SEDISTA:{{rUser.reservedSeat.number2}}</div>
+                            <button (click)="cancleFlight(rUser)" class="myButton2">cancle flight </button>
+
+                            <form style="margin-left: 85%; margin-top: -3%;" #form="ngForm" [formGroup]="flightRate" autocomplete="off" (ngSubmit)="onSubmit2(rUser)" id="signup-form" class="signup-form">
+                            <!-- <input type="number" style="width: 60px;" name="rate" id="rate" class="form-input" placeholder="Rate" formControlName="rate"/> -->
+                            <select style="width: 60px;" name="rate" id="rate" class="form-input"  formControlName="rate" >
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+
+                                
+                        </select>
+                            <div class="form-group">
+                                <input type="submit"   name="submit" id="submit" class="form-submit" value="Rate flight"/>
+                            </div>
+
+                            <!-- <button (click)="giveRate(rUser)" class="myButton2" >Give rate </button> -->
+                        </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div>
+                        <div *ngFor="let reservation of filtredReservationCars" class="div1">
+                            <div class="div2"></div>
+                            <div class="div3From">Model:{{reservation.car.model}}</div>
+                            <div class="div3From" style="margin-left: 15%;">Brand:{{reservation.car.brand}}</div>
+                            <div>Pocetni datum:{{reservation.startDate}}</div>
+                            <div>Krajnji datum:{{reservation.endDate}}</div>
+                            <button style="margin-left: 60%; margin-top: -10%;" (click)="deleteResercation(reservation)" class="myButton2">Cancle Reservation</button>
+
+                            <form style="margin-left: 85%; margin-top: -3%;" #form="ngForm" [formGroup]="carRate" autocomplete="off" (ngSubmit)="onSubmit(reservation)" id="signup-form" class="signup-form">
+                                <div class="form-group">
+                                    <input type="number" min="1" max="5" style="width: 60px;" name="rate" id="rate" class="form-input" placeholder="Rate" formControlName="rate"/>
+                                    <div class="validation-error" *ngIf="(carRate.get('rate').invalid && carRate.get('rate').touched)">This field is required</div>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <input type="submit" [disabled]="carRate.invalid" name="submit" id="submit" class="form-submit" value="Rent"/>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-9">
+                    <div *ngFor="let friend of acceptedFriends" class="div1">
+                        <div class="div2"></div>
+                        <div class="div3From">{{friend.userEmail2}}</div>
+                        <!-- <div class="div3From" >{{friend.userEmail1}}</div> -->
+
+                        <div class="btn2">
+                            <button (click)="deleteFriend(friend)" class="myButton2">Delete </button>
+
+                        </div>
+
+                    </div>
+                    <div *ngFor="let friend of pom1" class="div1">
+                        <div class="div2"></div>
+                        <div class="div3From">{{friend.userEmail1}}</div>
+                        <!-- <div class="div3From" >{{friend.userEmail1}}</div> -->
+
+                        <div class="btn2">
+                            <button (click)="deleteFriend(friend)" class="myButton2">Delete </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-9">
+                    <div *ngFor="let friend of allFriendsReq" class="div1">
+                        <div class="div2"></div>
+                        <div class="div3From">{{friend.userEmail1}}</div>
+                        <div class="image"></div>
+                        <div class="div4"></div>
+                        <!-- <div class="div5To">{{friend.userEmail2}}</div> -->
+                        <div class="divName"></div>
+                        <div class="btn2">
+                            <button (click)="acceptFrind(friend)" class="myButton2">Accept </button>
+                            <button (click)="ignoreFfriend(friend)" class="myButton2">Ignore </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        <!-- </div> -->
+
+        <div class="admin" [hidden]="check()">
+            <div class="s002">
+                <form>
+                    <div class="inner-form">
+                        <div class="input-field fifth-wrap">
+                            <div class="input-field fifth-wrap">
+                                <button class="btn-search" style="font-size: small" type="button"
+                                    (click)="onAddRentService()">Add Rent Admin</button>
+                            </div>
+                            <div class="input-field fifth-wrap">
+                                <button class="btn-search" style="font-size: small" type="button"
+                                    (click)="onAddFlightService()">Add Fligth Admin</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+</body>

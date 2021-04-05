@@ -1,0 +1,66 @@
+<form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)" id="signup-form" class="signup-form">
+
+    <input type="hidden" name="serviceId" [value]="service.formData.serviceId">
+
+      <div class="form-group">
+        Rent Service Name: 
+        <input #serviceName="ngModel" [(ngModel)]="service.formData.serviceName" name="serviceName" type="text" class="form-input" id="serviceName" placeholder="{{rentService.serviceName}}"  required/>
+        <div class="validation-error" *ngIf="serviceName.invalid && serviceName.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        Rent Service Locarion:
+        <input #location="ngModel" [(ngModel)]="service.formData.location" name="location" type="text" class="form-input" id="location" placeholder="{{rentService.location}}" required/>
+        <div class="validation-error" *ngIf="location.invalid && location.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        <!-- <button class="btn-search" type="button">Add Image</button> -->
+        Rent Service Img:
+        <input #img="ngModel" [(ngModel)]="service.formData.img" name="img" type="text" class="form-input" id="about" placeholder="{{rentService.img}}" required/>
+        <div class="validation-error" *ngIf="img.invalid && img.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        Rent Service Description:
+        <input #description="ngModel" [(ngModel)]="service.formData.description" name="description"  type="text" class="form-input" id="about" placeholder="{{rentService.description}}" required/>
+        <div class="validation-error" *ngIf="description.invalid && description.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        About Rent Service:
+        <input #about="ngModel" [(ngModel)]="service.formData.about" name="about" type="text" class="form-input" id="about" placeholder="{{rentService.about}}" required/>
+        <div class="validation-error" *ngIf="about.invalid && about.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        Rent Service Price Table:
+        <input #priceTable="ngModel" [(ngModel)]="service.formData.priceTable" name="priceTable" type="text" class="form-input" id="priceTable" placeholder="{{rentService.priceTable}}" required/>
+        <div class="validation-error" *ngIf="priceTable.invalid && priceTable.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        Rent Service Contact:
+        <input #contact="ngModel" [(ngModel)]="service.formData.contact" name="contact" type="text" class="form-input" id="contact" placeholder="{{rentService.contact}}" required/>
+        <div class="validation-error" *ngIf="contact.invalid && contact.touched">This field is required</div>
+      </div>
+
+      <!-- <div class="form-group">
+        Rent Service Latitude:
+        <input #lat="ngModel" [(ngModel)]="service.formData.lat" name="lat" type="number" class="form-input" id="contact" placeholder="{{rentService.lat}}" required/>
+        <div class="validation-error" *ngIf="lat.invalid && lat.touched">This field is required</div>
+      </div>
+
+      <div class="form-group">
+        Rent Service Longitude:
+        <input #lng="ngModel" [(ngModel)]="service.formData.lng" name="lng" type="number" class="form-input" id="contact" placeholder="{{rentService.lng}}" required/>
+        <div class="validation-error" *ngIf="lng.invalid && lng.touched">This field is required</div>
+      </div> -->
+
+      <div class="form-group">
+        <input type="submit" [disabled]="form.invalid" name="submit" id="submit" class="form-submit" value="Change Rent Service"/>
+    </div>
+
+    <button mat-dialog-close> Close</button>
+
+  </form>

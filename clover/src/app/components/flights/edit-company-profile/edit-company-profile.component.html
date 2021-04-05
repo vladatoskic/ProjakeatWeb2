@@ -1,0 +1,51 @@
+<div class="bg"> 
+        <div class="conteiner8">
+    <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)" id="signup-form" class="signup-form">
+    
+        <input type="hidden" name="avioCompID" [value]="service.formData?.avioCompID">
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Avio Comp Name:
+            <input #avioCompName="ngModel" [(ngModel)]="service.formData.avioCompName" name="avioCompName" type="text" class="form-input" id="avioCompName" class="form-control"   required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Avio Comp Address:
+            <input #avioCompAddress="ngModel" [(ngModel)]="service.formData.avioCompAddress" name="avioCompAddress" type="text" class="form-input" id="avioCompAddress" class="form-control" required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+           
+            Avio Comp About:
+            <input #avioCompAbout="ngModel" [(ngModel)]="service.formData.avioCompAbout" name="avioCompAbout" type="text" class="form-input" id="avioCompAbout" class="form-control" required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Avio Comp Destinations:
+            <input #avioCompDestinations="ngModel" [(ngModel)]="service.formData.avioCompDestinations" name="avioCompDestinations"  type="text" class="form-input" id="avioCompDestinations" class="form-control" required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Avio Comp Fast Reservation Discount:
+            <input #avioCompFastReservationDiscount="ngModel" [(ngModel)]="service.formData.avioCompFastReservationDiscount" name="avioCompFastReservationDiscount" type="text" class="form-input" id="avioCompFastReservationDiscount" class="form-control" required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Avio Comp Seats:
+            <input #avioCompSeats="ngModel" [(ngModel)]="service.formData.avioCompSeats" name="avioCompSeats" type="text" class="form-input" id="avioCompSeats" class="form-control" required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Avio Comp Prices:
+            <input #avioCompPrices="ngModel" [(ngModel)]="service.formData.avioCompPrices" name="avioCompPrices" type="text" class="form-input" id="avioCompPrices" class="form-control" required/>
+          </div>
+    
+          
+    
+          <div class="form-group" class="poz">
+            <input type="submit" (click)="editCompanyInfo()" name="submit" id="submit" class="form-submit" value="change company info" />
+        </div>
+    
+      </form>
+      </div>
+      </div>

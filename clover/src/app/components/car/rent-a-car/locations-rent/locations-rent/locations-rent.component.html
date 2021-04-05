@@ -1,0 +1,58 @@
+<header id="header" class="fixed-left">
+  <div class="container d-flex align-items-center">
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a fragment="hero" (click)="onHome()">Home</a></li>
+        <li><a fragment="about" (click)="onAbout()">About</a></li>
+        <li><a fragment="cars" (click)="onCars()">Cars</a></li>
+        <li><a fragment="locations" (click)="onLocations()">Locations</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section style="width: 100px; height: 100px; margin-left: 90%; margin-top: 2%;" id="admin" [hidden]="check()">
+  <div class="adminDiv">
+    <div class="booking-form">
+      <form style="margin-top: 27%;">
+        <p style="color:white;"> Admin Services</p>
+        <div class="form-btn">
+          <button class="submit-btn" type="button" (click)="onAddOffice()">Add Office</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div [hidden]="this.rentService.serviceOffice?.length !== 0">
+  <hr />
+  <h5 style="text-align: center;">Trenutno nema dostupnih offica koja zadovoljavaju zadate parametre.</h5>
+</div>
+<div style="margin-left: 10%; margin-top: 10%;" [hidden]="this.rentService.serviceOffice?.length === 0">
+  <div *ngFor="let office of this.allOffice" class="div1">
+    <div class="divName">Office Name:{{office.officeName}}</div>
+    <div class="div5To">
+      <Address></Address>Address: {{office.address}}
+    </div>
+    <div class="btn">
+      <button class="myButton" [hidden]="check()" (click)="onDelete(office.officeId)">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+<div [hidden]="this.rentService.serviceOffice?.length === 0">
+  <div id="locations" class="locations">
+    <agm-map [zoom]="9" [latitude]="this.rentService.serviceOffice[0].lat"
+      [longitude]="this.rentService.serviceOffice[0].lng">
+      <div *ngFor="let office of this.rentService.serviceOffice" class="div1">
+        <agm-marker [latitude]="office.lat" [longitude]="office.lng">
+        </agm-marker>
+      </div>
+    </agm-map>
+  </div>
+</div>
+
+
+

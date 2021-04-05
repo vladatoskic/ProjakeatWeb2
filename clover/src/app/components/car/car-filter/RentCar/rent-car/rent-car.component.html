@@ -1,0 +1,51 @@
+<div style="margin-left: 25%; margin-top: 5%;">
+  <h1 style="margin-left: 15%;" mat-dialog-title>Brend: {{car.brand}} Model: {{car.model}}</h1>
+
+
+
+  <form #form="ngForm" [formGroup]="reservationForm" autocomplete="off" id="signup-form"
+    class="signup-form">
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <span class="form-label">Start Date</span>
+          <input formControlName="startDate" style="width: 175px;" class="form-control" type="date" id="startDate"
+            name="startDate" required>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <span style="margin-left: 40px;" class="form-label">End Date</span>
+          <input formControlName="endDate" style="width: 175px; margin-left: 40px;" class="form-control" type="date"
+            id="endDate" name="endDate" required>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <span class="form-label">Start Location</span>
+        <select [(ngModel)]="startOffice" class="form-control">
+          <option *ngFor="let f of this.rentService.serviceOffice" [ngValue]="f">{{f.officeName}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <span class="form-label">End Location</span>
+        <select [(ngModel)]="endOffice" class="form-control">
+          <option *ngFor="let f of this.rentService.serviceOffice" [ngValue]="f">{{f.officeName}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <input type="button" class="myButton" value="Rent" (click)="onSubmit()">
+
+</div>

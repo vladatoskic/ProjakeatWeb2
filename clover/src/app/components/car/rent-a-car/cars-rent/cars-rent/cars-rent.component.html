@@ -1,0 +1,144 @@
+<header id="header" class="fixed-left">
+  <div class="container d-flex align-items-center">
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a fragment="hero" (click)="onHome()">Home</a></li>
+        <li><a fragment="about" (click)="onAbout()">About</a></li>
+        <li><a fragment="cars" (click)="onCars()">Cars</a></li>
+        <li><a fragment="locations" (click)="onLocations()">Locations</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="filter">
+<div class="booking-form">
+    <form [formGroup]="DateForm">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <span class="form-label">Start Office</span>
+            <select style="width: 150px;" [(ngModel)]="startOffice" class="form-control">
+              <option *ngFor="let f of this.rentService?.serviceOffice" [ngValue]="f">{{f.officeName}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-left: -3%;" class="col-md-3">
+          <div class="form-group">
+            <span style="margin-left: -25%;" class="form-label">Start Location</span>
+            <input style="width: 150px; margin-left: -30%;" class="form-control" type="text" placeholder="Start Location" id="startLocationFilter">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <span style="margin-left: -110%;" class="form-label">Passengers</span>
+            <input class="form-control" style="width: 100px; margin-left: -115%;" type="number" placeholder="Price" id="carMinSeatsFilter">
+          </div>
+        </div>
+
+        <div style="margin-left: -3%;" class="col-md-3">
+          <div class="form-group">
+            <span class="form-label">Start Date</span>
+            <input style="width: 150px;" class="form-control" type="date" formControlName="startDate" required>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <span class="form-label">End Office</span>
+            <select style="width: 150px;" [(ngModel)]="endOffice" class="form-control">
+              <option *ngFor="let f of this.rentService?.serviceOffice" [ngValue]="f">{{f.officeName}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-left: -3%;" class="col-md-3">
+          <div class="form-group">
+            <span style="margin-left: -25%;" class="form-label">End Location</span>
+            <input style="width: 150px; margin-left: -30%;" class="form-control" type="text" placeholder="End Location" id="endLocationFilter">
+          </div>
+        </div>
+
+        <div style="margin-left: -16%;" class="col-md-4">
+          <div class="form-group">
+            <span class="form-label">Price</span>
+            <input class="form-control" style="width: 100px;" type="number" placeholder="Price" id="carMaxPerDayPriceFilter">
+          </div>
+        </div>
+
+        <div style="margin-left: -23%; margin-top: 0.4%;" class="col-md-2">
+          <div class="form-btn">
+            <button class="submit-btn" (click)="filterCars()">Show Filtred Cars</button>
+          </div>
+        </div>
+
+        <div style="margin-left: 3%;" class="col-md-3">
+          <div class="form-group">
+            <span  class="form-label">End Date</span>
+            <input style="width: 150px;" class="form-control" type="date" formControlName="endDate" required>
+          </div>
+        </div>
+
+        <div style="margin-left: -8%;" class="col-md-2">
+          <div class="form-btn">
+            <button style="width: 220px;" class="submit-btn" (click)="filterAvelableCars()">Show Avelable Cars</button>
+          </div>
+        </div>
+        
+      </div>
+    </form>
+  </div>     
+</div>
+
+<div class="radio" style="width:150px;">
+  <div class="s002" >
+    <form>
+      <div class="inner-form">
+        <div class="input-field fifth-wrap">
+          <p style="color:lavenderblush; margin-left: 12%; margin-bottom: 20%;"> Sort</p>
+          <div class="input-field fifth-wrap">
+            <div class="row">
+              <input type="radio" value="brand" #mySelection1 (click)="Sort1(mySelection1.value)" name="sort" style="height: 1em; margin-left: -47%;">
+              <p style="color:lavenderblush; margin-left: -40%; margin-top: -1%;"> Brand</p>
+            </div>
+            <div class="row">
+              <input type="radio" value="model" name="sort" #mySelection2 (click)="Sort1(mySelection2.value)" style="height: 1em; margin-left: -47%;">
+              <p style="color:lavenderblush; margin-left: -40%; margin-top: -1%;"> Model</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <section style="margin-top: -30%;" id="admin" [hidden]="check()">
+    <div class="adminDiv">
+      <div class="booking-form">
+        <form style="margin-top: 17%;">
+              <p style="color:white;"> Admin Services</p>
+                <div class="form-btn">
+                  <button class="submit-btn" type="button" (click)="onAddCar()">Add Car</button>
+                </div>
+        </form>
+      </div>
+      </div>
+  </section>
+
+  <!-- <button class="submit-btn" type="button" (click)="onAddCar()">Add Car</button> -->
+
+
+  <div style="margin-top: -12%;" class="conteiner3" id="style-22">
+    <div [hidden]="this.rentService?.serviceCars?.length !== 0">
+      <hr/>
+      <h5 style="text-align: center;">Trenutno nema dostupnih vozila koja zadovoljavaju zadate parametre.</h5>
+    </div>
+    <div [hidden]="this.rentService?.serviceCars?.length === 0">
+      <app-car-filter [filtredCars]="filtredCars"></app-car-filter>
+     </div>
+    </div>

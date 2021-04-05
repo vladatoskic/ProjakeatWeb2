@@ -1,0 +1,227 @@
+<body>
+        <div class="bg"> 
+        <div class="conteinter4">
+        <div class="image2"></div>
+        <div class="about"  ><h4 style="color:whitesmoke;margin-top:1%; ">COMPANY NAME:{{companyData.avioCompName}} </h4></div>
+        <div class="about"><p style="color:whitesmoke;margin-top:3%;">COMPANY ADDRESS:{{companyData.avioCompAddress}} </p></div>
+        <div class="about"><p style="color:whitesmoke;margin-top:5%;">COMPANY ABOUT:{{companyData.avioCompAbout}} </p></div>
+
+        <div class="about"><p style="color:whitesmoke;margin-top:7%;">COMPANY DESTINATIONS:{{companyData.avioCompDestinations}} </p></div>
+
+        <div class="about"><p style="color:whitesmoke;margin-top:10%;">COMPANY SEATS:{{companyData.avioCompSeats}} </p></div>
+        <div class="about"><p style="color:whitesmoke;margin-top:13%;">PROSECNA OCENA:{{this.prosek}} </p></div>
+
+
+        
+            
+        </div>
+        <div><button   *ngIf="dalijeadmin()"  type="button" class="form-submit" (click)="onSelect2(id)" >change info about company</button></div> 
+        <!-- <div class="booking-form">
+                        <form>
+                                <div class="form-group">
+                                        <div class="form-checkbox">
+                                                <label for="roundtrip">
+                                                        <input type="radio" id="roundtrip" name="flight-type">
+                                                        <span></span>Roundtrip
+                                                </label>
+                                                <label for="one-way">
+                                                        <input type="radio" id="one-way" name="flight-type">
+                                                        <span></span>One way
+                                                </label>
+                                                <label for="multi-city">
+                                                        <input type="radio" id="multi-city" name="flight-type">
+                                                        <span></span>Multi-City
+                                                </label>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <span class="form-label">Flying from</span>
+                                                        <input class="form-control" type="text" placeholder="City or airport">
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                        <span class="form-label">Flyning to</span>
+                                                        <input class="form-control" type="text" placeholder="City or airport">
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <div class="form-group">
+                                                        <span class="form-label">Departing</span>
+                                                        <input class="form-control" type="date" required>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <div class="form-group">
+                                                        <span class="form-label">Returning</span>
+                                                        <input class="form-control" type="date" required>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                                <div class="form-group">
+                                                        <span class="form-label">Adults (18+)</span>
+                                                        <select class="form-control">
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                                <div class="form-group">
+                                                        <span class="form-label">Children (0-17)</span>
+                                                        <select class="form-control">
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-3">
+                                                <div class="form-group">
+                                                        <span class="form-label">Travel class</span>
+                                                        <select class="form-control">
+                                                                <option>Economy class</option>
+                                                                <option>Business class</option>
+                                                                <option>First class</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                                <div class="form-btn">
+                                                        <button routerLink="/book-a-flight" class="submit-btn">Show flights</button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </form>
+                </div> -->
+                
+               
+                <div class="conteiner3" id="style-22" >
+                                <div class="inp1"><input type="text" class="inp" name="min" placeholder="lowest price.."></div>
+                                <div class="inp2"><input type="text" class="inp" name="max" placeholder="higest price.."></div>
+                                <div class="inp3"><input type="text" class="inp" name="cnm" placeholder="company name.."></div>
+                                <div class="btn11"><button class="button1">filter</button></div>
+                                <!--<div class="slctComp"> <select class="inp" name="country">
+                                                <option value="australia">Wizzair</option>
+                                                <option value="canada">Rayanair</option>
+                                                <option value="usa">USA</option>
+                                          </select></div>-->
+                                        
+                                <div *ngFor="let f of allFlightss" class="div1">
+                                                <div class="div2">{{f.departing.toLocaleString()}}</div>
+                                                <div class="div3From">{{f.from}}</div>
+                                                <div class="image"></div>
+                                                <div class="div4">{{f.returning.toLocaleString()}}</div>
+                                                <div class="div5To">{{f.to}}</div>
+                                                <div class="divName">{{f.companyName}}</div>
+                                                <div class="btn2">
+                                                <button (click)="fastRezervation(f)"  class="myButton2">fast reservation{{f.price/2}}$</button>
+                                        </div>
+                                        </div>
+
+                </div>
+                            
+    </div>
+
+
+    <div class="conteiner8"  *ngIf="dalijeadmin()">
+                <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)" >
+
+                 <input type="hidden" name="flightID" [value]="service.formData.flightID">
+                 <input type="hidden" name="flightID" [value]="companyData.avioCompID">
+
+
+
+                 
+                <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                       From:
+                        <input name="from"   #from="ngModel" [(ngModel)]="service.formData.from"  type="text"  class="form-control" placeholder="City or airport" id="from"  required>
+        <div class="validation-error" *ngIf="from.invalid && from.touched">This field is required</div>
+
+                </div>
+                <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                      To:
+                      <input name="to" class="form-control" #to="ngModel" [(ngModel)]="service.formData.to"  type="text" placeholder="City or airport"  id="to" required>
+        <div class="validation-error" *ngIf="to.invalid && to.touched">This field is required</div>
+
+                </div>
+                 <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Departing:
+                   <input name="departing" class="form-control"  #departing="ngModel" [(ngModel)]="service.formData.departing"  id="departing" type="date" required>
+        <div class="validation-error" *ngIf="departing.invalid && departing.touched">This field is required</div>
+
+                  </div>
+                  <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Returning:
+                                <input  name="returning" #returning="ngModel" [(ngModel)]="service.formData.returning" id="returning" class="form-control" type="date" required>
+        <div class="validation-error" *ngIf="returning.invalid && returning.touched">This field is required</div>
+</div>
+                 <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Classf:
+                                <input name="classf" #classf="ngModel" [(ngModel)]="service.formData.classf"  id="classf" class="form-control" type="text" placeholder="class" required>
+        <div class="validation-error" *ngIf="classf.invalid && classf.touched">This field is required</div>
+</div>
+                <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Baggage:
+                                <input name="baggage" #baggage="ngModel" [(ngModel)]="service.formData.baggage"   id="baggage" class="form-control" type="text" placeholder="baggage" required>
+        <div class="validation-error" *ngIf="baggage.invalid && baggage.touched">This field is required</div>
+</div>   
+
+                <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Stops:
+                                <input name="stops" #stops="ngModel" [(ngModel)]="service.formData.stops"  id="stops" class="form-control" type="number" placeholder="stops" required>
+        <div class="validation-error" *ngIf="stops.invalid && stops.touched">This field is required</div>
+</div>   
+                  <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Duration:
+                                <input name="duration"  #duration="ngModel" [(ngModel)]="service.formData.duration" id="duration" class="form-control" type="text" placeholder="duration" required>
+        <div class="validation-error" *ngIf="duration.invalid && duration.touched">This field is required</div>
+</div> 
+                    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                                Company Name:
+                                <input name="companyName" #companyName="ngModel" [(ngModel)]="service.formData.companyName"  id="companyName" class="form-control" type="text" placeholder="companyName" required>
+        <div class="validation-error" *ngIf="companyName.invalid && companyName.touched">This field is required</div>
+</div>   
+                <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                                Price:
+                                <input name="price" #price="ngModel" [(ngModel)]="service.formData.price"  id="price" class="form-control" type="number" placeholder="price" required>
+        <div class="validation-error" *ngIf="price.invalid && price.touched">This field is required</div>
+</div>   
+
+
+                <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        SeatsNumber:
+                        <input #seatsNumber="ngModel" [(ngModel)]="service.formData.seatsNumber" name="seatsNumber" type="number"  class="form-control"  id="seatsNumber" required/>
+        <div class="validation-error" *ngIf="seatsNumber.invalid && seatsNumber.touched">This field is required</div>
+</div>
+
+                      <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Start time:
+                        <input #startTime="ngModel" [(ngModel)]="service.formData.startTime" name="startTime" type="time"  class="form-control"  id="startTime" required/>
+        <div class="validation-error" *ngIf="startTime.invalid && startTime.touched">This field is required</div>
+</div>
+
+                      <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        End time:
+                        <input #endTime="ngModel" [(ngModel)]="service.formData.endTime" name="endTime" type="time"  class="form-control"  id="endTime" required/>
+        <div class="validation-error" *ngIf="endTime.invalid && endTime.touched">This field is required</div>
+</div>
+               
+
+                <div class="form-group">
+                 <input  type="submit" [disabled]="form.invalid" name="submit" id="submit" class="form-submit" value="Add Flight" class="poz"/>
+                </div>
+                </form>
+    </div>
+</body>

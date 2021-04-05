@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <div class="bg">
+  <div class="main">
+
+    <div class="row mt-5" style="margin-left: 100px;">
+        <div class="white-text text-md-left" style="width: 500px; margin-top: 100px;"> 
+            <h1 class="text h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">Sign up right now! </h1>
+            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+            <h6 class="text mb-3 wow fadeInLeft" data-wow-delay="0.3s">NAJBOLJI SAJT ZA REZERVACIJU LETOVA I AUTOMOBILA </h6>
+            <a class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s" routerLink="/pomocna">Learn more</a>
+        </div>
+    </div>
+  
+    <section class="signup">
+        <div class="container">
+            <div *ngIf="displayStr == 'SingIn'" class="signup-content">
+                <div>
+                    <button type="button" class="btn"><span>Sing in</span></button>
+                    <button type="button" class="btn" (click)="showRegister()"><span>Register</span></button>
+                  </div>
+
+                <form #form="ngForm" [formGroup]="singInForm" autocomplete="off" (ngSubmit)="onSubmit()" id="signup-form" class="signup-form">
+                    <div class="form-group">
+                        <input type="email"name="email" id="Email" class="form-input" placeholder="Mail" formControlName="email"/>
+                        <div class="validation-error" *ngIf="(singInForm.get('email').invalid && singInForm.get('email').touched)">This field is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="password" id="Password" class="form-input" placeholder="Password" formControlName="password"/>
+                        <div class="validation-error" *ngIf="singInForm.get('password').invalid && singInForm.get('password').touched">This field is required</div>
+                      </div>
+  
+                    <div class="form-group">
+                        <input type="submit" [disabled]="singInForm.invalid" name="submit" id="submit" class="form-submit" value="Sign in"/>
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <a href="">Remember me</a>
+                        </div>
+                        <div> 
+                            <a href="">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <p>or sign in with:</p>
+                    <div style="text-align: center;">
+                        <a (click)="OnFacebook()" class="fa fa-facebook"></a>
+                        <a (click)="OnGoogle()" class="fa fa-google"></a>
+                    </div>
+                </form>
+            </div>
+
+            
+
+            <div *ngIf="displayStr == 'SingUp'" class="signup-content">
+                <app-sing-up (messageEvent)="reciveMessage($event)"></app-sing-up>
+            </div>
+        </div>
+    </section>
+
+  </div>
+  </div>
+  </body>

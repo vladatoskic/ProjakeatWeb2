@@ -1,0 +1,23 @@
+<div [hidden]="this.allCars?.length !==0">
+  <hr />
+  <div style="background-color: aliceblue;">
+    <h5 style="text-align: center; margin-top: 0%;">Trenutno nema dostupnih rent a car servisa koja zadovoljavaju
+      zadate parametre.</h5>
+  </div>
+</div>
+
+<div [hidden]="this.allCars?.length ===0">
+  <div *ngFor="let car of this.allCars" class="div1">
+    <div class="image" style="content:url({{car.imgUrl}})"></div>
+    <!-- <div class="divName">{{car.serviceName}}</div> -->
+    <div class="div5To">Brand: {{car.brand}} Year:{{car.year}}</div>
+    <div class="div6To">Model: {{car.model}} Seats:{{car.numOfSeats}}</div>
+    <div class="div3From">{{car.location}} Type:{{car.typeOfCar}}</div>
+    <div class="rate">
+      <ngb-rating [rate]="car.averageRate"></ngb-rating>
+    </div>
+    <div class="btn">
+      <button class="myButton" (click)="onRent(car)">Rent {{car.pricePerDay}}$</button>
+    </div>
+  </div>
+</div>

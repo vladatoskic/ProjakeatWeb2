@@ -1,0 +1,43 @@
+<div class="nav">
+  <div class="nav-agileinfo">
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      <!-- owl-carousel -->
+      <div class="item">
+        <div class="pricing pricing-two">
+          <div class="pricing-bottom">
+            <div class="agileits-buy">
+              <div class="row" style="margin-left: -10%; margin-top: -25%;">
+                <a class="popup-with-zoom-anim" style="width: 190px; height: 60px;" (click)="onServiceRate()">Average
+                  Service Rate</a>
+                <a class="popup-with-zoom-anim" style="width: 176px; height: 60px;" (click)="onCarRate()">Car Rate</a>
+                <a class="popup-with-zoom-anim" style="width: 176px; height: 60px;" (click)="onGraph()">Graph</a>
+                <a class="popup-with-zoom-anim" style="width: 176px; height: 60px;" (click)="onRevenues()">Revenues</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="margin-top: 20%; margin-left: -30%;" [hidden]="this.rentService.serviceCars?.length !== 0">
+    <div style="background-color: aliceblue;" style="margin-left: -120%; margin-top: -30%;">
+      <h5>Trenutno nema dostupnih rent a car servisa koja zadovoljavaju
+        zadate parametre.</h5>
+    </div>
+  </div>
+  <div [hidden]="this.rentService.serviceCars?.length === 0">
+    <div style="margin-left: 10%; margin-top: -7%;">
+      <div *ngFor="let car of this.rentService.serviceCars" class="div1">
+        <div class="image" style="content:url({{car.imgUrl}})"></div>
+        <!-- <div class="divName">{{car.serviceName}}</div> -->
+        <div class="div5To">Brand: {{car.brand}} &nbsp;&nbsp; Year:{{car.year}}</div>
+        <div class="div6To">Model: {{car.model}} &nbsp;&nbsp; Seats:{{car.numOfSeats}}</div>
+        <div class="div3From">Location:{{car.location}} &nbsp;&nbsp; Type:{{car.typeOfCar}}</div>
+        <div class="rate">
+          <ngb-rating [rate]="car.averageRate"></ngb-rating>
+        </div>
+      </div>
+    </div>
+  </div>

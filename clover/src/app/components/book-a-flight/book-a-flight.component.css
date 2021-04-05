@@ -1,0 +1,79 @@
+body, html {
+    background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+  }
+
+  .bg {
+    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg');
+    height: 100%;
+    width: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .conteiner{
+    margin-left: 32%;
+    margin-right: 7%;
+    margin-top: 3%;
+    height: 80%;
+    padding: 20px;
+   
+    
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.table{
+   
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.param {
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+.param-inline dt {
+    display: inline-block;
+}
+.param dt {
+    margin: 0;
+    margin-right: 7px;
+    font-weight: 600;
+}
+.param-inline dd {
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+.param dd {
+    margin: 0;
+    vertical-align: baseline;
+} 
+
+.shopping-cart-wrap .price {
+    color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+    display: block;
+}
+var {
+    font-style: normal;
+}
+
+.media img {
+    margin-right: 1rem;
+}
+.img-sm {
+    width: 90px;
+    max-height: 75px;
+    object-fit: cover;
+}
+  

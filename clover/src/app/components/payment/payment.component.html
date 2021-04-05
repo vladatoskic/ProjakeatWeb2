@@ -1,0 +1,93 @@
+ <body>
+     <div class="bg">
+
+
+            <div  class="div1" style="margin-left: 40%;">
+
+                    <div class="div2">{{flightData.departing}}</div>
+                    <div class="div3From">{{flightData.from}}</div>
+                   
+                    <div class="div4">{{flightData.returning}}</div>
+                    <div class="div5To">{{flightData.to}}</div>
+                    <div class="divName">{{flightData.companyName}}</div>
+                    <div class="btn">
+                    
+                </div>
+                </div>
+              
+
+                <button (click)="onButtonClick($event)" class="myButton2" (click)="finalPay()">Pay flight </button>
+                <button *ngIf="dalijeadmin()" class="myButton2" (click)="removeSeat()">Remove seat </button>
+                <button class="myButton2" (click)="inviteFriend()">Invite a friend </button>
+
+
+                <button [disabled]="disable" class="myButton2" (click)="rentCar()">Rent A Car </button>
+                
+                <p> You need to pay:{{seatPrice}}</p> 
+             <!-- <div class="plane">
+  <div class="cockpit">
+    <h1>Please select a seat</h1>
+  </div>
+  <div class="exit exit--front fuselage">
+
+  </div> -->
+
+
+<div style="margin-top: 15%;">
+<div class="wrapper" style="margin-left: 40%;" *ngFor="let seat of sortedSeats">
+    <ol class="cabin fuselage">
+  <li class="row row--1">
+    <ol class="seats" type="A">
+      <li class="seat">
+        <input type="checkbox" id="1A" (click)="reserve(seat)" />
+        <p for="1A">{{seat.number2}}</p>
+      </li>
+    </ol>
+    </li>
+    </ol> 
+    <!-- <form>
+    <input type="radio">
+    <label for="">{{seat.number2}}</label>
+  </form> -->
+    <!-- <button>{{seat.number2}} </button> -->
+</div>
+</div>
+<div>
+    <div *ngFor="let friend of acceptedFriends" class="div51">
+        <div class="div24"></div>
+        <div class="div3From">{{friend.userEmail2}}</div>
+        <!-- <div class="div3From" >{{friend.userEmail1}}</div> -->
+
+        <div class="btn2">
+            <button (click)="invite(friend)" class="myButton2">Invite </button>
+
+        </div>
+
+    </div>
+    <div *ngFor="let friend of pom1" class="div51">
+        <div class="div24"></div>
+        <div class="div3From">{{friend.userEmail1}}</div>
+        <!-- <div class="div3From" >{{friend.userEmail1}}</div> -->
+
+        <div class="btn2">
+            <button (click)="invite(friend)" class="myButton2">Invite </button>
+            
+        </div>
+
+    </div>
+</div>
+ 
+<!-- <form>
+    <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+    <label for="fruit1">Apple</label>
+    <input type="checkbox" id="fruit2" name="fruit-2" value="Banana" disabled>
+    <label for="fruit2">Banana</label>
+    <input type="checkbox" id="fruit3" name="fruit-3" value="Cherry" checked disabled>
+    <label for="fruit3">Cherry</label>
+    <input type="checkbox" id="fruit4" name="fruit-4" value="Strawberry">
+    <label for="fruit4">Strawberry</label>
+  </form> -->
+
+
+    </div>
+  </body>

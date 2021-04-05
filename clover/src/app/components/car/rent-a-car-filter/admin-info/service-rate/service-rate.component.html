@@ -1,0 +1,43 @@
+<div class="nav">
+  <div class="nav-agileinfo">
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      <!-- owl-carousel -->
+      <div class="item">
+        <div class="pricing pricing-two">
+          <div class="pricing-bottom">
+            <div class="agileits-buy">
+              <div class="row" style="margin-left: -10%; margin-top: -25%;">
+                <a class="popup-with-zoom-anim" style="width: 190px; height: 60px;" (click)="onServiceRate()">Average
+                  Service Rate</a>
+                <a class="popup-with-zoom-anim" style="width: 176px; height: 60px;" (click)="onCarRate()">Car Rate</a>
+                <a class="popup-with-zoom-anim" style="width: 176px; height: 60px;" (click)="onGraph()">Graph</a>
+                <a class="popup-with-zoom-anim" style="width: 176px; height: 60px;" (click)="onRevenues()">Revenues</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="margin-left: 24%;" class="list">
+  <div class="item">
+    <div class="pricing pricing-two">
+      <div class="pricing-top top-two">
+        <h3>{{rentService.serviceName}}</h3>
+        <p>{{rentService.location}}</p>
+        <div class="rate">
+          <ngb-rating [rate]="this.rate"></ngb-rating>
+        </div>
+      </div>
+      <div class="pricing-bottom">
+        <div class="img1">
+          <img style="width: 100%;" src={{rentService.img}} />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

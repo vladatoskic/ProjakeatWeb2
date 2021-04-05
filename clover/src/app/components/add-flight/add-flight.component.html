@@ -1,0 +1,72 @@
+<div class="bg"> 
+<div class="conteiner8">
+    <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)" >
+
+     <!-- <input type="hidden" name="flightID" [value]="service.formData.flightID"> -->
+   <!--  <input type="hidden" name="flightID" [value]="companyData.avioCompID"> -->
+
+    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+           From:
+            <input #from="ngModel" name="from"    [(ngModel)]="service.formData.from"  type="text"  class="form-control"  id="from"  required>
+    </div>
+    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+          To:
+          <input  #to="ngModel" name="to" class="form-control" [(ngModel)]="service.formData.to"  type="text" placeholder="City or airport"  id="to" required>
+    </div>
+     <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Departing:
+       <input #departing="ngModel" name="departing" class="form-control"   [(ngModel)]="service.formData.departing"  id="departing" type="date" required>
+      </div>
+      <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Returning:
+                    <input #returning="ngModel"  name="returning"  [(ngModel)]="service.formData.returning" id="returning" class="form-control" type="date" required>
+     </div>
+     <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Classf:
+                    <input #classf="ngModel" name="classf"  [(ngModel)]="service.formData.classf"  id="classf" class="form-control" type="text"  required>
+    </div>
+    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Baggage:
+                    <input  #baggage="ngModel" name="baggage" [(ngModel)]="service.formData.baggage"   id="baggage" class="form-control" type="text" placeholder="baggage" required>
+    </div>   
+
+    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Stops:
+                    <input #stops="ngModel" name="stops"  [(ngModel)]="service.formData.stops"  id="stops" class="form-control" type="number" placeholder="stops" required>
+    </div>   
+      <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            Duration:
+                    <input #duration="ngModel" name="duration"   [(ngModel)]="service.formData.duration" id="duration" class="form-control" type="text" placeholder="duration" required>
+    </div> 
+        <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                    Company Name:
+                    <input #companyName="ngModel" name="companyName"  [(ngModel)]="service.formData.companyName"  id="companyName" class="form-control" type="text" placeholder="companyName" required>
+    </div>   
+    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                    Price:
+                    <input #price="ngModel" name="price"  [(ngModel)]="service.formData.price"  id="price" class="form-control" type="number" placeholder="price" required>
+    </div>   
+
+
+    <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+            SeatsNumber:
+            <input #seatsNumber="ngModel" [(ngModel)]="service.formData.seatsNumber" name="seatsNumber" type="number"  class="form-control"  id="seatsNumber" required/>
+          </div>
+    
+          <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        Start time:
+                        <input #startTime="ngModel" [(ngModel)]="service.formData.startTime" name="startTime" type="time"  class="form-control"  id="startTime" required/>
+                      </div>
+
+                      <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                        End time:
+                        <input #endTime="ngModel" [(ngModel)]="service.formData.endTime" name="endTime" type="time"  class="form-control"  id="endTime" required/>
+                      </div>
+   
+
+    <div class="form-group">
+     <input  type="submit" name="submit" id="submit" class="form-submit" value="Change Flight" class="poz"/>
+    </div>
+    </form>
+</div>
+</div>

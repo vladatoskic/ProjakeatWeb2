@@ -1,0 +1,36 @@
+<div class="bg"> 
+        <div class="conteiner8">
+            <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)" >
+        
+             <!-- <input type="hidden" name="flightID" [value]="service.formData.flightID"> -->
+           <!--  <input type="hidden" name="flightID" [value]="companyData.avioCompID"> -->
+        
+            <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                   Name:
+                    <input #name="ngModel" name="name"    [(ngModel)]="service.formData.name"  type="text"  class="form-control"  id="name"  required>
+            </div>
+            <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                  Email:
+                  <input  #email="ngModel" name="email" class="form-control" [(ngModel)]="service.formData.email"  type="text" placeholder="City or airport"  id="email" required>
+            </div>
+             <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                   Password:
+               <input #password="ngModel" name="password" class="form-control"   [(ngModel)]="service.formData.password"  id="password" type="text" required>
+              </div>
+              <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                    City:
+                            <input #city="ngModel"  name="city"  [(ngModel)]="service.formData.city" id="city" class="form-control" type="text" required>
+             </div>
+             <div class="form-group" style="color:rgba(226, 225, 225, 0.966);">
+                    Phone number:
+                            <input #phoneNumber="ngModel" name="phoneNumber"  [(ngModel)]="service.formData.phoneNumber"  id="phoneNumber" class="form-control" type="text"  required>
+            </div>
+   
+
+        
+            <div class="form-group">
+             <input  type="submit" name="submit" id="submit" class="form-submit" value="Change info" class="poz"/>
+            </div>
+            </form>
+        </div>
+        </div>

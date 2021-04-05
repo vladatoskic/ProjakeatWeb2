@@ -1,0 +1,219 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-attachment: fixed; 
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  -ms-background-size:cover;
+  background-size:cover;
+  }
+  
+  .item{
+  width:700px;
+  display: inline-block;
+  }
+  
+  .nav {
+    width: 100%;
+  }
+  .nav-agileinfo {
+    margin: 0 auto;
+  text-align: center;
+  }
+  .pricing {
+  margin: 0 auto; 
+  -webkit-transition:.5s all;
+  -moz-transition:.5s all;
+  -o-transition:.5s all;
+  -ms-transition:.5s all;
+  transition:.5s all;
+  } 
+  .pricing:before {
+    content: '';
+    background: #FF69B4;
+    width:0%;
+    height: 6px;
+    bottom: 0px;
+    position: absolute;
+    left: 0;
+  -webkit-transition:.5s all;
+  -moz-transition:.5s all;
+  -o-transition:.5s all;
+  -ms-transition:.5s all;
+  transition:.5s all;
+  }
+  .pricing-top{
+    padding: 1.2em 0;
+  background:#FF69B4;
+  text-align:center;
+  }
+  .top-two{
+  background:#0099e5;
+  }
+  
+  .pricing.pricing-two:before { 
+    background: #0099e5; 
+  }
+  
+  .pricing:hover:before{
+  width: 100%;
+  }
+  .pricing-top h3{
+  color:#FFF;
+  font-size:1.5em;
+  margin:0; 
+  font-weight:700;
+  font-family: 'Petit Formal Script', cursive;
+  }
+  .pricing-top p {
+    color: #FFF;
+    font-size: .9em;
+    margin: 0.8em 0 0 0;
+    font-weight: 300;
+    letter-spacing: 6px;
+  }
+  .pricing-bottom{
+    background: rgba(255, 255, 255, 0.19);
+    text-align: center;
+    padding: 2em;
+  }
+  .pricing-bottom p {
+    color: #fff;
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.8em;
+    font-weight: 500;
+    border-bottom: 1px dashed #a7a7a7;
+    padding: 0.8em 0;
+  }
+  .pricing-bottom p:nth-child(1) { 
+    border-top: 1px dashed #a7a7a7; 
+  }
+  .pricing-bottom p.w3agile {
+  color:#ccc; 
+  }  
+  .agileits-buy { 
+    margin: 1.5em 0 0 0;
+  }
+  .agileits-buy a{ 
+    padding: .5em 2em;
+  border: solid 1px #FF69B4;
+  background:#FF69B4;
+    color: #fff;
+  font-size: 1em;
+  display: inline-block;
+  }
+  .pricing .agileits-buy a:hover{
+  background: none !important;   
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  text-decoration: none;
+  }
+  .pricing.pricing-two .agileits-buy a{
+  background-color: #0099e5;
+  border-color: #0099e5;
+  }
+  
+  .owl-carousel .owl-wrapper-outer { 
+    padding: 3em 0;
+  } 
+  #owl-demo .item {
+    padding: 0;
+    margin: 0 0.5em;
+    color: #FFF;
+    text-align: center;
+  }
+  
+  
+  
+  
+  .div1{
+    background-color: rgba(234, 247, 246, 0.808);
+    width: 500px;
+    height: 205px;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  
+  div.image {
+    position: absolute;
+    width: 150px;
+    height: 170px;
+    left: 10px;
+    top: 12px;
+   
+  }
+  
+  .divName{
+    font-family: "Impact";
+    font-size: 130%;
+    position: absolute;
+    left: 210px;
+    
+  }
+  
+  .div5To{
+    font-family: "Lucida sole";
+    font-size: 150%;
+    position: absolute;
+    left: 210px;
+    top: 25px;
+  }
+  
+  .div6To{
+    font-family: "Lucida sole";
+    font-size: 150%;
+    position: absolute;
+    left: 210px;
+    top: 51px;
+  }
+  
+  .div3From{
+    font-family: "Lucida sole";
+    font-size: 150%;
+    position: absolute;
+    left: 210px;
+    top: 75px;
+  }
+  
+  .btn{
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+  }
+  
+  .myButton {
+    box-shadow: 0px 1px 0px 0px #f0f7fa;
+    background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+    background-color:#33bdef;
+    border-radius:11px;
+    border:1px solid #057fd0;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 24px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #5b6178;
+    }
+    .myButton:hover {
+    background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+    background-color:#019ad2b6;
+    }
+    .myButton:active {
+    position:relative;
+    top:1px;
+    }
+  
+    .rate{
+      margin-left: 70%;
+      margin-top: 23%
+    }
